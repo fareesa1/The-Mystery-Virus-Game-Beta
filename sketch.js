@@ -32,61 +32,61 @@ function preload(){
   platformImg = loadImage("backgrounds/platform.png")
   
 
-  player_img= loadAnimation("/flatboy/png/Idle1.png","/flatboy/png/Idle2.png","/flatboy/png/Idle3.png","/flatboy/png/Idle4.png",
-    "/flatboy/png/Idle5.png","/flatboy/png/Idle6.png","/flatboy/png/Idle7.png","/flatboy/png/Idle8.png","/flatboy/png/Idle9.png",
-    "/flatboy/png/Idle10.png","/flatboy/png/Idle11.png","/flatboy/png/Idle12.png","/flatboy/png/Idle13.png","/flatboy/png/Idle14.png",
-    "/flatboy/png/Idle15.png")
+  player_img= loadAnimation("./flatboy/png/Idle1.png","./flatboy/png/Idle2.png","./flatboy/png/Idle3.png","./flatboy/png/Idle4.png",
+    "./flatboy/png/Idle5.png","./flatboy/png/Idle6.png","./flatboy/png/Idle7.png","./flatboy/png/Idle8.png","./flatboy/png/Idle9.png",
+    "./flatboy/png/Idle10.png","./flatboy/png/Idle11.png","./flatboy/png/Idle12.png","./flatboy/png/Idle13.png","./flatboy/png/Idle14.png",
+    "./flatboy/png/Idle15.png")
 
-   player_Dead_img= loadAnimation("/flatboy/png/dead1.png","/flatboy/png/dead2.png","/flatboy/png/dead3.png","/flatboy/png/dead4.png",
-    "/flatboy/png/dead5.png","/flatboy/png/dead6.png","/flatboy/png/dead7.png","/flatboy/png/dead8.png","/flatboy/png/dead9.png",
-    "/flatboy/png/dead10.png","/flatboy/png/dead11.png","/flatboy/png/dead12.png","/flatboy/png/dead13.png","/flatboy/png/Idle14.png",
-     "/flatboy/png/Idle15.png")
+   player_Dead_img= loadAnimation("./flatboy/png/dead1.png","./flatboy/png/dead2.png","./flatboy/png/dead3.png","./flatboy/png/dead4.png",
+    "./flatboy/png/dead5.png","./flatboy/png/dead6.png","./flatboy/png/dead7.png","./flatboy/png/dead8.png","./flatboy/png/dead9.png",
+    "./flatboy/png/dead10.png","./flatboy/png/dead11.png","./flatboy/png/dead12.png","./flatboy/png/dead13.png","./flatboy/png/Idle14.png",
+     "./flatboy/png/Idle15.png")
 
-  player_img_run= loadAnimation("/flatboy/png/Run1.png","/flatboy/png/Run2.png","/flatboy/png/Run3.png","/flatboy/png/Run4.png",
-    "/flatboy/png/Run5.png","/flatboy/png/Run6.png","/flatboy/png/Run7.png","/flatboy/png/Run8.png","/flatboy/png/Run9.png",
-    "/flatboy/png/Run10.png","/flatboy/png/Run11.png","/flatboy/png/Run12.png","/flatboy/png/Run13.png","/flatboy/png/Run14.png",
-    "/flatboy/png/Run15.png")
+  player_img_run= loadAnimation("./flatboy/png/Run1.png","./flatboy/png/Run2.png","./flatboy/png/Run3.png","./flatboy/png/Run4.png",
+    "./flatboy/png/Run5.png","./flatboy/png/Run6.png","./flatboy/png/Run7.png","./flatboy/png/Run8.png","./flatboy/png/Run9.png",
+    "./flatboy/png/Run10.png","./flatboy/png/Run11.png","./flatboy/png/Run12.png","./flatboy/png/Run13.png","./flatboy/png/Run14.png",
+    "./flatboy/png/Run15.png")
 
-  player_img_jump= loadAnimation("/flatboy/png/Jump1.png","/flatboy/png/Jump2.png","/flatboy/png/Jump3.png","/flatboy/png/Jump4.png",
-    "/flatboy/png/Jump5.png","/flatboy/png/Jump6.png","/flatboy/png/Jump7.png","/flatboy/png/Jump8.png","/flatboy/png/Jump9.png",
-    "/flatboy/png/Jump10.png","/flatboy/png/Jump11.png","/flatboy/png/Jump12.png","/flatboy/png/Jump13.png","/flatboy/png/Jump14.png",
-    "/flatboy/png/Jump15.png")
+  player_img_jump= loadAnimation("./flatboy/png/Jump1.png","./flatboy/png/Jump2.png","./flatboy/png/Jump3.png","./flatboy/png/Jump4.png",
+    "./flatboy/png/Jump5.png","./flatboy/png/Jump6.png","./flatboy/png/Jump7.png","./flatboy/png/Jump8.png","./flatboy/png/Jump9.png",
+    "./flatboy/png/Jump10.png","./flatboy/png/Jump11.png","./flatboy/png/Jump12.png","./flatboy/png/Jump13.png","./flatboy/png/Jump14.png",
+    "./flatboy/png/Jump15.png")
 
-  dino1Animation = loadAnimation("/Mini-Dinos/DinoSprites_doux-0/0.png","/Mini-Dinos/DinoSprites_doux-0/1.png","/Mini-Dinos/DinoSprites_doux-0/2.png",
-     "/Mini-Dinos/DinoSprites_doux-0/3.png","/Mini-Dinos/DinoSprites_doux-0/4.png","/Mini-Dinos/DinoSprites_doux-0/5.png","/Mini-Dinos/DinoSprites_doux-0/6.png",
-     "/Mini-Dinos/DinoSprites_doux-0/7.png","/Mini-Dinos/DinoSprites_doux-0/8.png","/Mini-Dinos/DinoSprites_doux-0/9.png",
-     "/Mini-Dinos/DinoSprites_doux-0/10.png","/Mini-Dinos/DinoSprites_doux-0/11.png","/Mini-Dinos/DinoSprites_doux-0/12.png","/Mini-Dinos/DinoSprites_doux-0/13.png",
-     "/Mini-Dinos/DinoSprites_doux-0/14.png")  
+  dino1Animation = loadAnimation("./Mini-Dinos/DinoSprites_doux-0/0.png","./Mini-Dinos/DinoSprites_doux-0/1.png","./Mini-Dinos/DinoSprites_doux-0/2.png",
+     "./Mini-Dinos/DinoSprites_doux-0/3.png","./Mini-Dinos/DinoSprites_doux-0/4.png","./Mini-Dinos/DinoSprites_doux-0/5.png","./Mini-Dinos/DinoSprites_doux-0/6.png",
+     "./Mini-Dinos/DinoSprites_doux-0/7.png","./Mini-Dinos/DinoSprites_doux-0/8.png","./Mini-Dinos/DinoSprites_doux-0/9.png",
+     "./Mini-Dinos/DinoSprites_doux-0/10.png","./Mini-Dinos/DinoSprites_doux-0/11.png","./Mini-Dinos/DinoSprites_doux-0/12.png","./Mini-Dinos/DinoSprites_doux-0/13.png",
+     "./Mini-Dinos/DinoSprites_doux-0/14.png")  
 
-  dino2Animation = loadAnimation("/Mini-Dinos/DinoSprites_mort-0/0.png","/Mini-Dinos/DinoSprites_mort-0/1.png","/Mini-Dinos/DinoSprites_mort-0/2.png",
-    "/Mini-Dinos/DinoSprites_mort-0/3.png","/Mini-Dinos/DinoSprites_mort-0/4.png","/Mini-Dinos/DinoSprites_mort-0/5.png","/Mini-Dinos/DinoSprites_mort-0/6.png",
-    "/Mini-Dinos/DinoSprites_mort-0/7.png","/Mini-Dinos/DinoSprites_mort-0/8.png","/Mini-Dinos/DinoSprites_mort-0/9.png",
-    "/Mini-Dinos/DinoSprites_mort-0/10.png","/Mini-Dinos/DinoSprites_mort-0/11.png","/Mini-Dinos/DinoSprites_mort-0/12.png","/Mini-Dinos/DinoSprites_mort-0/13.png",
-    "/Mini-Dinos/DinoSprites_mort-0/14.png") 
+  dino2Animation = loadAnimation("./Mini-Dinos/DinoSprites_mort-0/0.png","./Mini-Dinos/DinoSprites_mort-0/1.png","./Mini-Dinos/DinoSprites_mort-0/2.png",
+    "./Mini-Dinos/DinoSprites_mort-0/3.png","./Mini-Dinos/DinoSprites_mort-0/4.png","./Mini-Dinos/DinoSprites_mort-0/5.png","./Mini-Dinos/DinoSprites_mort-0/6.png",
+    "./Mini-Dinos/DinoSprites_mort-0/7.png","./Mini-Dinos/DinoSprites_mort-0/8.png","./Mini-Dinos/DinoSprites_mort-0/9.png",
+    "./Mini-Dinos/DinoSprites_mort-0/10.png","./Mini-Dinos/DinoSprites_mort-0/11.png","./Mini-Dinos/DinoSprites_mort-0/12.png","./Mini-Dinos/DinoSprites_mort-0/13.png",
+    "./Mini-Dinos/DinoSprites_mort-0/14.png") 
 
-  dino3Animation = loadAnimation("/Mini-Dinos/DinoSprites_tard-0/0.png","/Mini-Dinos/DinoSprites_tard-0/1.png","/Mini-Dinos/DinoSprites_tard-0/2.png",
-    "/Mini-Dinos/DinoSprites_tard-0/3.png","/Mini-Dinos/DinoSprites_tard-0/4.png","/Mini-Dinos/DinoSprites_tard-0/5.png","/Mini-Dinos/DinoSprites_tard-0/6.png",
-    "/Mini-Dinos/DinoSprites_tard-0/7.png","/Mini-Dinos/DinoSprites_tard-0/8.png","/Mini-Dinos/DinoSprites_tard-0/9.png",
-    "/Mini-Dinos/DinoSprites_tard-0/10.png","/Mini-Dinos/DinoSprites_tard-0/11.png","/Mini-Dinos/DinoSprites_tard-0/12.png","/Mini-Dinos/DinoSprites_tard-0/13.png",
-    "/Mini-Dinos/DinoSprites_tard-0/14.png") 
+  dino3Animation = loadAnimation("./Mini-Dinos/DinoSprites_tard-0/0.png","./Mini-Dinos/DinoSprites_tard-0/1.png","./Mini-Dinos/DinoSprites_tard-0/2.png",
+    "./Mini-Dinos/DinoSprites_tard-0/3.png","./Mini-Dinos/DinoSprites_tard-0/4.png","./Mini-Dinos/DinoSprites_tard-0/5.png","./Mini-Dinos/DinoSprites_tard-0/6.png",
+    "./Mini-Dinos/DinoSprites_tard-0/7.png","./Mini-Dinos/DinoSprites_tard-0/8.png","./Mini-Dinos/DinoSprites_tard-0/9.png",
+    "./Mini-Dinos/DinoSprites_tard-0/10.png","./Mini-Dinos/DinoSprites_tard-0/11.png","./Mini-Dinos/DinoSprites_tard-0/12.png","./Mini-Dinos/DinoSprites_tard-0/13.png",
+    "./Mini-Dinos/DinoSprites_tard-0/14.png") 
 
-  dino4Animation = loadAnimation("/Mini-Dinos/DinoSprites_vita-0/0.png","/Mini-Dinos/DinoSprites_vita-0/1.png","/Mini-Dinos/DinoSprites_vita-0/2.png",
-    "/Mini-Dinos/DinoSprites_vita-0/3.png","/Mini-Dinos/DinoSprites_vita-0/4.png","/Mini-Dinos/DinoSprites_vita-0/5.png","/Mini-Dinos/DinoSprites_vita-0/6.png",
-    "/Mini-Dinos/DinoSprites_vita-0/7.png","/Mini-Dinos/DinoSprites_vita-0/8.png","/Mini-Dinos/DinoSprites_vita-0/9.png",
-    "/Mini-Dinos/DinoSprites_vita-0/10.png","/Mini-Dinos/DinoSprites_vita-0/11.png","/Mini-Dinos/DinoSprites_vita-0/12.png","/Mini-Dinos/DinoSprites_vita-0/13.png",
-    "/Mini-Dinos/DinoSprites_vita-0/14.png")   
+  dino4Animation = loadAnimation("./Mini-Dinos/DinoSprites_vita-0/0.png","./Mini-Dinos/DinoSprites_vita-0/1.png","./Mini-Dinos/DinoSprites_vita-0/2.png",
+    "./Mini-Dinos/DinoSprites_vita-0/3.png","./Mini-Dinos/DinoSprites_vita-0/4.png","./Mini-Dinos/DinoSprites_vita-0/5.png","./Mini-Dinos/DinoSprites_vita-0/6.png",
+    "./Mini-Dinos/DinoSprites_vita-0/7.png","./Mini-Dinos/DinoSprites_vita-0/8.png","./Mini-Dinos/DinoSprites_vita-0/9.png",
+    "./Mini-Dinos/DinoSprites_vita-0/10.png","./Mini-Dinos/DinoSprites_vita-0/11.png","./Mini-Dinos/DinoSprites_vita-0/12.png","./Mini-Dinos/DinoSprites_vita-0/13.png",
+    "./Mini-Dinos/DinoSprites_vita-0/14.png")   
 
-  abilityItem1Animation = loadAnimation("/Coins/Blue/blueCoin1.png","/Coins/Blue/blueCoin2.png","/Coins/Blue/blueCoin3.png",
-    "/Coins/Blue/blueCoin4.png","/Coins/Blue/blueCoin5.png","/Coins/Blue/blueCoin6.png")
+  abilityItem1Animation = loadAnimation("./Coins/Blue/blueCoin1.png","./Coins/Blue/blueCoin2.png","./Coins/Blue/blueCoin3.png",
+    "./Coins/Blue/blueCoin4.png","./Coins/Blue/blueCoin5.png","./Coins/Blue/blueCoin6.png")
 
-  abilityItem2Animation = loadAnimation("/Coins/Bronze/bronzeCoin1.png","/Coins/Bronze/bronzeCoin2.png","/Coins/Bronze/bronzeCoin3.png",
-    "/Coins/Bronze/bronzeCoin4.png","/Coins/Bronze/bronzeCoin5.png","/Coins/Bronze/bronzeCoin6.png")
+  abilityItem2Animation = loadAnimation("./Coins/Bronze/bronzeCoin1.png","./Coins/Bronze/bronzeCoin2.png","./Coins/Bronze/bronzeCoin3.png",
+    "./Coins/Bronze/bronzeCoin4.png","./Coins/Bronze/bronzeCoin5.png","./Coins/Bronze/bronzeCoin6.png")
 
-  abilityItem3Animation = loadAnimation("/Coins/Gold/goldCoin1.png","/Coins/Gold/goldCoin2.png","/Coins/Gold/goldCoin3.png",
-    "/Coins/Gold/goldCoin4.png","/Coins/Gold/goldCoin5.png","/Coins/Gold/goldCoin6.png")
+  abilityItem3Animation = loadAnimation("./Coins/Gold/goldCoin1.png","./Coins/Gold/goldCoin2.png","./Coins/Gold/goldCoin3.png",
+    "./Coins/Gold/goldCoin4.png","./Coins/Gold/goldCoin5.png","./Coins/Gold/goldCoin6.png")
 
-  abilityItem4Animation = loadAnimation("/Coins/Silver/silverCoin1.png","/Coins/Silver/silverCoin2.png","/Coins/Silver/silverCoin3.png",
-    "/Coins/Silver/silverCoin4.png","/Coins/Silver/silverCoin5.png","/Coins/Silver/silverCoin6.png")
+  abilityItem4Animation = loadAnimation("./Coins/Silver/silverCoin1.png","./Coins/Silver/silverCoin2.png","./Coins/Silver/silverCoin3.png",
+    "./Coins/Silver/silverCoin4.png","./Coins/Silver/silverCoin5.png","./Coins/Silver/silverCoin6.png")
 
 }
 
