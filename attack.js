@@ -2,21 +2,29 @@ function dinoAttack(){
     if(dinoHead1.isTouching(player) ){
         dino1.destroy()
         dinoHead1.destroy()
+        jumpCounter = 0
+        player.velocityY = -10
     }
 
     if(dinoHead2.isTouching(player) ){
         dino2.destroy()
         dinoHead2.destroy()
+        jumpCounter = 0
+        player.velocityY = -10
     }
 
     if(dinoHead3.isTouching(player) ){
         dino3.destroy()
         dinoHead3.destroy()
+        jumpCounter = 0
+        player.velocityY = -10
     }
 
     if(dinoHead4.isTouching(player) ){
         dino4.destroy()
         dinoHead4.destroy()
+        jumpCounter = 0
+        player.velocityY = -10
     }
 }
 
@@ -48,5 +56,4 @@ function playerAttack(){
         dino4.velocityX = -6.1
         placeHolder2 = 1
     }
-
-    }
+}

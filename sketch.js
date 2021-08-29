@@ -1,18 +1,17 @@
 //character varaibles
-var player, player_frnd1, player_frnd2, player_frnd3, 
-player_frnd4, dino1, dano2, dino3, dino4, boss;
+var player, dino1, dino2, dino3, dino4, boss;
 
 //character aniamations
-var player_img, player_img_run, player_frnd1_img, player_frnd2_img, player_frnd3_img, 
-player_frnd4_img, boss;
+var player_img, player_run_img, player_dead_img, player_jump_img, boss;
 
 //hidden dino varaibles
 var dino1Animation, dino2Animation, dino3Animation, dino4Animation;
 var dinoHead1, dinoHead2, dinoHead3, dinoHead4
 
 var bgImage, bgImage2, bgImage3;
-var ground, story, ground1, jumpZone, stageEnd1,platform1,platform2,platform1inv,platform2inv;
-var platformImg
+var ground, story, ground1, jumpZone, stageEnd1, stageEnd2;
+var platform1,platform2,platform3,platform1inv,platform2inv,platform3inv;
+var platformImg, platformImg2, stagePlatform, stagePlatform1, stagePlatform2, stagePlatforminv1, stagePlatform2inv, stagePlatformImg
 var gameState = "start";
 
 var placeHolder2 = 0;
@@ -20,8 +19,9 @@ var stage = 1;
 var stageNeed = 1;
 var jumpCounter = 0;
 var maxJump = 1;
+var jumpStop = 0;
 
-var ability1 = 0, ability2, ability3, ability4;
+var ability1 = 0, ability2 = 0, ability3, ability4;
 var abilityItem1, abilityItem2, abilityItem3, abilityItem4;
 var abilityItem1Animation, abilityItem2Animation, abilityItem3Animation, abilityItem4Animation;
 
@@ -30,33 +30,33 @@ function preload(){
   bgImage2 = loadImage("backgrounds/beach.PNG");
   bgImage3 = loadImage("backgrounds/boneBeach.PNG");
   platformImg = loadImage("backgrounds/platform.png")
+  stagePlatformImg = loadImage("backgrounds/stagePlatform.png")
   
-
   player_img= loadAnimation("./flatboy/png/Idle1.png","./flatboy/png/Idle2.png","./flatboy/png/Idle3.png","./flatboy/png/Idle4.png",
     "./flatboy/png/Idle5.png","./flatboy/png/Idle6.png","./flatboy/png/Idle7.png","./flatboy/png/Idle8.png","./flatboy/png/Idle9.png",
     "./flatboy/png/Idle10.png","./flatboy/png/Idle11.png","./flatboy/png/Idle12.png","./flatboy/png/Idle13.png","./flatboy/png/Idle14.png",
     "./flatboy/png/Idle15.png")
 
-   player_Dead_img= loadAnimation("./flatboy/png/dead1.png","./flatboy/png/dead2.png","./flatboy/png/dead3.png","./flatboy/png/dead4.png",
+   player_dead_img= loadAnimation("./flatboy/png/dead1.png","./flatboy/png/dead2.png","./flatboy/png/dead3.png","./flatboy/png/dead4.png",
     "./flatboy/png/dead5.png","./flatboy/png/dead6.png","./flatboy/png/dead7.png","./flatboy/png/dead8.png","./flatboy/png/dead9.png",
     "./flatboy/png/dead10.png","./flatboy/png/dead11.png","./flatboy/png/dead12.png","./flatboy/png/dead13.png","./flatboy/png/Idle14.png",
-     "./flatboy/png/Idle15.png")
+    "./flatboy/png/Idle15.png")
 
-  player_img_run= loadAnimation("./flatboy/png/Run1.png","./flatboy/png/Run2.png","./flatboy/png/Run3.png","./flatboy/png/Run4.png",
+  player_run_img= loadAnimation("./flatboy/png/Run1.png","./flatboy/png/Run2.png","./flatboy/png/Run3.png","./flatboy/png/Run4.png",
     "./flatboy/png/Run5.png","./flatboy/png/Run6.png","./flatboy/png/Run7.png","./flatboy/png/Run8.png","./flatboy/png/Run9.png",
     "./flatboy/png/Run10.png","./flatboy/png/Run11.png","./flatboy/png/Run12.png","./flatboy/png/Run13.png","./flatboy/png/Run14.png",
     "./flatboy/png/Run15.png")
 
-  player_img_jump= loadAnimation("./flatboy/png/Jump1.png","./flatboy/png/Jump2.png","./flatboy/png/Jump3.png","./flatboy/png/Jump4.png",
+  player_jump_img= loadAnimation("./flatboy/png/Jump1.png","./flatboy/png/Jump2.png","./flatboy/png/Jump3.png","./flatboy/png/Jump4.png",
     "./flatboy/png/Jump5.png","./flatboy/png/Jump6.png","./flatboy/png/Jump7.png","./flatboy/png/Jump8.png","./flatboy/png/Jump9.png",
     "./flatboy/png/Jump10.png","./flatboy/png/Jump11.png","./flatboy/png/Jump12.png","./flatboy/png/Jump13.png","./flatboy/png/Jump14.png",
     "./flatboy/png/Jump15.png")
 
   dino1Animation = loadAnimation("./Mini-Dinos/DinoSprites_doux-0/0.png","./Mini-Dinos/DinoSprites_doux-0/1.png","./Mini-Dinos/DinoSprites_doux-0/2.png",
-     "./Mini-Dinos/DinoSprites_doux-0/3.png","./Mini-Dinos/DinoSprites_doux-0/4.png","./Mini-Dinos/DinoSprites_doux-0/5.png","./Mini-Dinos/DinoSprites_doux-0/6.png",
-     "./Mini-Dinos/DinoSprites_doux-0/7.png","./Mini-Dinos/DinoSprites_doux-0/8.png","./Mini-Dinos/DinoSprites_doux-0/9.png",
-     "./Mini-Dinos/DinoSprites_doux-0/10.png","./Mini-Dinos/DinoSprites_doux-0/11.png","./Mini-Dinos/DinoSprites_doux-0/12.png","./Mini-Dinos/DinoSprites_doux-0/13.png",
-     "./Mini-Dinos/DinoSprites_doux-0/14.png")  
+    "./Mini-Dinos/DinoSprites_doux-0/3.png","./Mini-Dinos/DinoSprites_doux-0/4.png","./Mini-Dinos/DinoSprites_doux-0/5.png","./Mini-Dinos/DinoSprites_doux-0/6.png",
+    "./Mini-Dinos/DinoSprites_doux-0/7.png","./Mini-Dinos/DinoSprites_doux-0/8.png","./Mini-Dinos/DinoSprites_doux-0/9.png",
+    "./Mini-Dinos/DinoSprites_doux-0/10.png","./Mini-Dinos/DinoSprites_doux-0/11.png","./Mini-Dinos/DinoSprites_doux-0/12.png","./Mini-Dinos/DinoSprites_doux-0/13.png",
+    "./Mini-Dinos/DinoSprites_doux-0/14.png")  
 
   dino2Animation = loadAnimation("./Mini-Dinos/DinoSprites_mort-0/0.png","./Mini-Dinos/DinoSprites_mort-0/1.png","./Mini-Dinos/DinoSprites_mort-0/2.png",
     "./Mini-Dinos/DinoSprites_mort-0/3.png","./Mini-Dinos/DinoSprites_mort-0/4.png","./Mini-Dinos/DinoSprites_mort-0/5.png","./Mini-Dinos/DinoSprites_mort-0/6.png",
@@ -136,7 +136,7 @@ function setup() {
 
   //technicall sprites
   ground = createSprite((displayWidth-70)/2,displayHeight-320, displayWidth*2, 30)
-  ground1 = createSprite((displayWidth-70)/2,displayHeight-320.5, displayWidth, 30)
+  ground1 = createSprite((displayWidth-70)/2,displayHeight-320.00000000000009, displayWidth, 30)
   jumpZone = createSprite((displayWidth-70)/2,displayHeight-450, displayWidth, 150)
   stageEnd1 = createSprite(displayWidth-100,displayHeight-450)
   story = createSprite((displayWidth-70)/2,(displayHeight-180)/2, 600, 600)
@@ -149,9 +149,9 @@ function setup() {
   //player 
   player = createSprite(300, 400, 50, 50);
   player.addAnimation("Idle", player_img);
-  player.addAnimation("Run", player_img_run);
-  player.addAnimation("Jump", player_img_jump);
-  player.addAnimation("dead",  player_Dead_img);
+  player.addAnimation("Run", player_run_img);
+  player.addAnimation("Jump", player_jump_img);
+  player.addAnimation("dead",  player_dead_img);
   player.debug = true;
   player.setCollider("rectangle", -180, 0, 200, 450)
   player.scale = 0.45
@@ -178,8 +178,7 @@ function draw() {
   movement();
   
   //the console
-  console.log(player.x)
-  console.log(player.y)
+  console.log(player.velocityY)
   
   
 
@@ -196,4 +195,14 @@ function Boss(){
 
 function collide(){
   player.collide(ground)
+
+  if(stage == 2){
+    player.collide(platform1)
+    player.collide(platform2)
+    player.collide(platform3)
+  }
+  if(stage == 3){
+    player.collide(stagePlatform1)
+    player.collide(stagePlatform2)
+  }
 }
