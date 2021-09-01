@@ -41,10 +41,10 @@ function preload(){
     "Idle10.png","Idle11.png","Idle12.png","Idle13.png","Idle14.png",
     "Idle15.png")
 
-   player_dead_img= loadAnimation("dead1.png","dead2.png","dead3.png","dead4.png",
-    "dead5.png","dead6.png","dead7.png","dead8.png","dead9.png",
-    "dead10.png","dead11.png","dead12.png","dead13.png","Idle14.png",
-    "Idle15.png")
+  player_dead_img= loadAnimation("Dead1.png","Dead2.png","Dead3.png","Dead4.png",
+"Dead5.png","Dead6.png","Dead7.png","Dead8.png","Dead9.png",
+"Dead10.png","Dead11.png","Dead12.png","Dead13.png","Idle14.png",
+"Idle15.png")
 
   player_run_img= loadAnimation("Run1.png","Run2.png","Run3.png","Run4.png",
     "Run5.png","Run6.png","Run7.png","Run8.png","Run9.png",
